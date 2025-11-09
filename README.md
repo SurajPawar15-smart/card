@@ -1,59 +1,73 @@
-# Card
+## 1️⃣ Initialize and push code to GitHub
+git init
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.8.
+git add .
 
-## Development server
+git commit -m "Initial commit"
 
-To start a local development server, run:
+git branch -M main
 
-```bash
-ng serve
-```
+git remote add origin https://github.com/SurajPawar15-smart/card.git
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+git push -u origin main
 
-## Code scaffolding
+## 2️⃣ Install the GitHub Pages deploy package
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+npm install -g angular-cli-ghpages
 
-```bash
-ng generate component component-name
-```
+## 3️⃣ Build your Angular app for production
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Replace <project-name> with your actual Angular app folder inside dist/.
 
-```bash
-ng generate --help
-```
+Example (if your Angular app name is card):
 
-## Building
+ng build --base-href "https://SurajPawar15-smart.github.io/card/"
 
-To build the project run:
+## 4️⃣ Deploy to GitHub Pages
 
-```bash
-ng build
-```
+npx angular-cli-ghpages --dir=dist/card/browser
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
+## ✅ 5️⃣ Done!
+Your Angular business card app will be live at:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+👉 https://SurajPawar15-smart.github.io/card/
 
-```bash
-ng test
-```
+## In short
 
-## Running end-to-end tests
+## Step-01
+PS F:\Angular\card> ng add angular-cli-ghpages
 
-For end-to-end (e2e) testing, run:
+Skipping installation: Package already installed
+Cannot read the output path (architect.build.options.outputPath) of the Angular project "card" in angular.json
 
-```bash
-ng e2e
-```
+PS F:\Angular\card> ng build --base-href "https://SurajPawar15-smart.github.io/card/"
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Initial chunk files   | Names         |  Raw size | Estimated transfer size
+styles-TZGDDOEH.css   | styles        | 231.42 kB |                22.76 kB
+main-TMWMXOUI.js      | main          | 199.14 kB |                54.58 kB
+polyfills-5CFQRCPP.js | polyfills     |  34.59 kB |                11.33 kB
 
-## Additional Resources
+                      | Initial total | 465.14 kB |                88.67 kB
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Application bundle generation complete. [9.064 seconds] - 2025-11-09T19:06:46.378Z
+
+Output location: F:\Angular\card\dist\card
+
+## Step-02 Build your Angular app for production
+
+ng build --base-href "https://SurajPawar15-smart.github.io/card/"
+
+## Step-03 Open to the repository setting => in pages => select main => then again but the below command
+
+PS F:\Angular\card> npx angular-cli-ghpages --dir=dist/card/browser
+
+## Step-04 On to the repository setting => in pages => select gh-pages => then again but the below command
+
+PS F:\Angular\card> npx angular-cli-ghpages --dir=dist/card/browser
+Successfully published via angular-cli-ghpages! Have a nice day!
+
+## Step-05 See the output
+
+https://SurajPawar15-smart.github.io/card/
+
